@@ -10,7 +10,7 @@
 
 .Header nav a {
   color: black;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: normal;
   margin: 0 10px;
   text-decoration: none;
@@ -28,14 +28,15 @@
 }
 
 .Home h2 {
-  font-size: 48;
-  font-weight: normal;
+  font-size: 48px;
+  font-weight: bold;
   margin: 0;
   margin-bottom: 30px;
 }
 
 .WeatherInfo {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -77,12 +78,41 @@
 }
 
 .Label {
+  color: black;
+  letter-spacing: 2px;
   font-size: 16px;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-/* Font Awesome Icons */
+/* Font Awesome */
 .WeatherInfo_Image {
   font-size: 120px;
+}
+
+@media screen and (max-width: 640px) {
+  .Header{
+    flex-direction: column;
+  }
+
+  .WeatherInfo {
+    flex-direction: column;
+  }
+
+  .WeatherInfo_Extra {
+    border: 2px solid black;
+    border-top: none;
+    flex-direction: column;
+  }
+
+  .Header nav a {
+    font-size: 16px;
+  }
+
+  .Header nav {
+    padding-bottom: 1em;
+  }
+
+  .Home  h2{
+    font-size: 36px;
+  }
 }
