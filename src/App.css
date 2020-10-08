@@ -27,6 +27,13 @@
   padding: 0 25px;
 }
 
+.Home h2 {
+  font-size: 48;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .WeatherInfo {
   display: flex;
   justify-content: space-between;
@@ -44,7 +51,6 @@
   font-size: 60px;
   margin: 0;
   margin-bottom: 30px;
-  font-weight: normal;
 }
 
 .WeatherInfo_Extra {
@@ -62,6 +68,12 @@
 .WeatherInfo_Temperature {
   font-size: 72px;
   margin: 0;
+}
+
+.WeatherInfo_Temperature_Small{
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .Label {

@@ -91,15 +91,14 @@ function Home() {
         <div>
             <Header />
             <main className="Home">
-                <h2>{city}</h2>
+                <h2>Weather in {city}</h2>
                 <div className="WeatherInfo">
 
                     <div className="WeatherInfo_Basic">
-                        {/* ICON */}
                         <div className="WeatherInfo_Image">
                             <WeatherImage weatherType={weatherType}  />
                         </div>
-                        <h3 className="WeatherInfo_Type">{weatherType}</h3>
+                        <p className="WeatherInfo_Type">{weatherType}</p>
                         <h3 className="Label">current temperature:</h3>
                         <p className="WeatherInfo_Temperature">{currentTemp}</p>
                     </div>
@@ -107,21 +106,19 @@ function Home() {
                     <div className="WeatherInfo_Extra">
                         <div className="WeatherInfo_Extra_Column">
                             <h3 className="Label">high temperature:</h3>
-                            <p>{highTemp}</p>
+                            <p className="WeatherInfo_Temperature_Small">{highTemp}</p>
                             <h3 className="Label">low temperature: </h3> 
-                            <p>{lowTemp}</p>
+                            <p className="WeatherInfo_Temperature_Small">{lowTemp}</p>
+                        </div>
+                        <div className="WeatherInfo_Extra_Column">
+                            <h3 className="Label">cloudiness:</h3>
+                            <p>{cloudiness}</p>
+                            <h3 className="Label">humidity:</h3>
+                            <p>{humidity}</p>
+                            <h3 className="Label">wind speed:</h3>
+                            <p>{windSpeed}</p>
                         </div>
                     </div>
-
-                    <div className="WeatherInfo_Extra_Column">
-                        <h3 className="Label">cloudiness:</h3>
-                        <p>{cloudiness}</p>
-                        <h3 className="Label">humidity:</h3>
-                        <p>{humidity}</p>
-                        <h3 className="Label">wind speed:</h3>
-                        <p>{windSpeed}</p>
-                    </div>
-
 
                 </div>
             </main>
