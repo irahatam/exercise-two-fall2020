@@ -1,27 +1,33 @@
-.Header{
+/* Header Styling */
+.Header {
   align-items: center;
   display: flex;
-  max-width: 1080px;
-  margin: 0 auto;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1080px;
   padding: 0 25px;
 }
 
-.Header nav a{
+.Header nav a {
   color: black;
+  font-size: 24px;
   font-weight: normal;
   margin: 0 10px;
   text-decoration: none;
-  font-size: 20px;
 }
 
 .Header nav a:hover {
-  color: blueviolet;
+  color: green;
 }
 
 /* Home Styling */
 .Home {
-  max-width: 1080px;
   margin: 0 auto;
+  max-width: 1080px;
   padding: 0 25px;
+}
+
+/* Font Awesome Icons */
+.WeatherInfo_Image {
+  font-size: 100px;
 }
