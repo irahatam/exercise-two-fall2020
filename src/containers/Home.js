@@ -16,7 +16,7 @@ function Home() {
     useEffect(() => {
         axios
             .get(
-                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherKey}`
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${weatherKey}`
             )
             .then(function (response) {
                 // successful request
