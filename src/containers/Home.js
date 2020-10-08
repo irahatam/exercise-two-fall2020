@@ -94,20 +94,33 @@ function Home() {
                 <h2>{city}</h2>
                 <div className="WeatherInfo">
 
-                    {/* ICON */}
-                    <div className="WeatherInfo_Image">
-                        <WeatherImage weatherType={weatherType}  />
+                    <div className="WeatherInfo_Basic">
+                        {/* ICON */}
+                        <div className="WeatherInfo_Image">
+                            <WeatherImage weatherType={weatherType}  />
+                        </div>
+                        <h3 className="WeatherInfo_Type">{weatherType}</h3>
+                        <h3 className="Label">current temperature:</h3>
+                        <p className="WeatherInfo_Temperature">{currentTemp}</p>
                     </div>
-                     
 
-                    {/* WEATHER INFO */}
-                    <p className="weatherInfo_Type">{weatherType}</p>
-                    <h3 className="weatherInfo_Current">current temperature: {currentTemp}</h3>
-                    <p>high temperature: {highTemp}</p>
-                    <p>low temperature: {lowTemp}</p>
-                    <p>cloudiness: {cloudiness}</p>
-                    <p>humidity: {humidity}</p>
-                    <p>wind speed: {windSpeed}</p>
+                    <div className="WeatherInfo_Extra">
+                        <div className="WeatherInfo_Extra_Column">
+                            <h3 className="Label">high temperature:</h3>
+                            <p>{highTemp}</p>
+                            <h3 className="Label">low temperature: </h3> 
+                            <p>{lowTemp}</p>
+                        </div>
+                    </div>
+
+                    <div className="WeatherInfo_Extra_Column">
+                        <h3 className="Label">cloudiness:</h3>
+                        <p>{cloudiness}</p>
+                        <h3 className="Label">humidity:</h3>
+                        <p>{humidity}</p>
+                        <h3 className="Label">wind speed:</h3>
+                        <p>{windSpeed}</p>
+                    </div>
 
 
                 </div>
