@@ -109,14 +109,14 @@ function Home() {
                             <p className="WeatherInfo_Temperature_Small">{highTemp}</p>
                             <h3 className="Label">low temperature: </h3> 
                             <p className="WeatherInfo_Temperature_Small">{lowTemp}</p>
+                            <h3 className="Label">wind speed:</h3>
+                            <p className="WeatherInfo_Temperature_Small">{windSpeed}</p>
                         </div>
                         <div className="WeatherInfo_Extra_Column">
                             <h3 className="Label">cloudiness:</h3>
                             <p className="WeatherInfo_Temperature_Small">{cloudiness}</p>
                             <h3 className="Label">humidity:</h3>
                             <p className="WeatherInfo_Temperature_Small">{humidity}</p>
-                            <h3 className="Label">wind speed:</h3>
-                            <p className="WeatherInfo_Temperature_Small">{windSpeed}</p>
                         </div>
                     </div>
                 </div>

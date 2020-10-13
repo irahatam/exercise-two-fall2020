@@ -127,10 +127,7 @@ main{
   }
 
   .WeatherInfo_Extra {
-    /* border: 2px solid black;
-    border-radius: 25px;
-    border-top: none; */
-    flex-direction: column;
+    text-align: center;
   }
 
   .Header nav a {
