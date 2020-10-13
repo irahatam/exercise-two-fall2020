@@ -85,7 +85,7 @@ function Home() {
             background: `linear-gradient(
             rgba(${parseInt(currentTemp.slice(0, -1)) > 80 ? "255, 204, 255" : "255, 153, 153"},
             ${parseInt(cloudiness.slice(0, -1)) / 250 + 1}), 
-            rgba(${parseInt(currentTemp.slice(0, -1)) > 80 ? "0,0,0" : "0,0,0"},
+            rgba(${parseInt(currentTemp.slice(0, -1)) > 80 ? "0,0,0" : "255,255,0"},
             ${parseInt(cloudiness.slice(0, -1)) / 250 + .5}))`,
         }}        
         >
