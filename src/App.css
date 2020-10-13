@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap');
+
+*{
+  font-family: "Commissioner", sans-serif;
+}
+
 /* Header Styling */
 .Header {
   align-items: center;
@@ -17,10 +23,22 @@
 }
 
 .Header nav a:hover {
-  color: yellow;
+  background: #98B4D4;
+  color: white;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
 }
 
 /* Home Styling */
+
+.Highlight{
+  background: #98B4D4;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
 .Home {
   margin: 0 auto;
   max-width: 1080px;
@@ -29,7 +47,7 @@
 
 .Home h2 {
   font-size: 48px;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0;
   margin-bottom: 30px;
 }
@@ -42,6 +60,7 @@
 
 .WeatherInfo_Basic {
   border: 2px solid black;
+  border-radius: 25px;
   flex-basis: 30%;
   padding: 30px;
   text-align: center;
@@ -55,8 +74,8 @@
 }
 
 .WeatherInfo_Extra {
-  border: 2px solid black;
-  border-left: none;
+  /* border: 2px solid black;
+  border-left: none; */
   display: flex;
   flex-basis: 70%;
   padding: 30px;
@@ -99,8 +118,9 @@
   }
 
   .WeatherInfo_Extra {
-    border: 2px solid black;
-    border-top: none;
+    /* border: 2px solid black;
+    border-radius: 25px;
+    border-top: none; */
     flex-direction: column;
   }
 
@@ -114,5 +134,6 @@
 
   .Home  h2{
     font-size: 36px;
+    text-align: center;
   }
 }

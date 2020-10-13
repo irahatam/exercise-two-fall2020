@@ -48,7 +48,6 @@ function Home() {
         windSpeed,
     } = useMemo(() => {
         let cloudiness = '';
-        let cloudinessValue = 0;
         let currentTemp = '';
         let highTemp = '';
         let humidity = '';
@@ -57,14 +56,13 @@ function Home() {
         let windSpeed = '';
 
         if(weatherData) {
-            cloudiness = weatherData.clouds.all + '%'; // Type: String (not always able to do math)
-            cloudinessValue = weatherData.clouds.all; // Type: Number (can do math)
-            currentTemp = Math.round(weatherData.main.temp) + '°';
-            highTemp = Math.round(weatherData.main.temp_max) + '°';
+            cloudiness = weatherData.clouds.all + '%'; 
+            currentTemp = Math.round(weatherData.main.temp) + '°C';
+            highTemp = Math.round(weatherData.main.temp_max) + '°C';
             humidity = weatherData.main.humidity + '%';
-            lowTemp = Math.round(weatherData.main.temp_min) + '°';
+            lowTemp = Math.round(weatherData.main.temp_min) + '°C';
             weatherType = weatherData.weather[0].description;
-            windSpeed = weatherData.wind.speed + ' m/h';
+            windSpeed = weatherData.wind.speed + ' mph';
         }
 
         return { 
@@ -93,7 +91,7 @@ function Home() {
         <div>
             <Header />
             <main className="Home">
-                <h2>Weather in {city}</h2>
+                <h2>Weather in <span className="Highlight">{city}</span></h2>
                 <div className="WeatherInfo">
 
                     <div className="WeatherInfo_Basic">
@@ -114,11 +112,11 @@ function Home() {
                         </div>
                         <div className="WeatherInfo_Extra_Column">
                             <h3 className="Label">cloudiness:</h3>
-                            <p>{cloudiness}</p>
+                            <p className="WeatherInfo_Temperature_Small">{cloudiness}</p>
                             <h3 className="Label">humidity:</h3>
-                            <p>{humidity}</p>
+                            <p className="WeatherInfo_Temperature_Small">{humidity}</p>
                             <h3 className="Label">wind speed:</h3>
-                            <p>{windSpeed}</p>
+                            <p className="WeatherInfo_Temperature_Small">{windSpeed}</p>
                         </div>
                     </div>
 

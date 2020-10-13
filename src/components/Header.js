@@ -4,7 +4,7 @@ function Header() {
     return (
         <header className="Header"> 
             <div>
-                <h1> Today's Weather </h1>
+                <h1> Matahari's Weather App </h1>
             </div>
             <nav>
                 <a href="/?city=Jakarta"> Jakarta </a>
