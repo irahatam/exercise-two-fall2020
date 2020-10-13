@@ -8,9 +8,9 @@ function Header() {
             </div>
             <nav>
                 <a href="/?city=Jakarta"> Jakarta </a>
-                <a href="/?city=Sydney"> Sydney </a>
+                <a href="/?city=Yokohama"> Yokohama </a>
                 <a href="/?city=Tokyo"> Tokyo </a>
-                <a href="/?city=London"> London </a>
+                <a href="/?city=Holmes Chapel"> Holmes Chapel </a>
             </nav>
         </header>
     );

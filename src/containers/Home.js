@@ -56,13 +56,13 @@ function Home() {
         let windSpeed = '';
 
         if(weatherData) {
-            cloudiness = weatherData.clouds.all + '%'; 
-            currentTemp = Math.round(weatherData.main.temp) + '°C';
-            highTemp = Math.round(weatherData.main.temp_max) + '°C';
-            humidity = weatherData.main.humidity + '%';
-            lowTemp = Math.round(weatherData.main.temp_min) + '°C';
-            weatherType = weatherData.weather[0].description;
-            windSpeed = weatherData.wind.speed + ' mph';
+            cloudiness = `${weatherData.clouds.all}%`; 
+            currentTemp = `${Math.round(weatherData.main.temp)}°C`;
+            highTemp = `${Math.round(weatherData.main.temp_max)}°C`;
+            humidity = `${weatherData.main.humidity}%`;
+            lowTemp = `${Math.round(weatherData.main.temp_min)}°C`;
+            weatherType = `${weatherData.weather[0].description}`;
+            windSpeed = `${weatherData.wind.speed} mph`;
         }
 
         return { 
@@ -76,19 +76,19 @@ function Home() {
          };
     }, [weatherData]);
 
-    // Display:
-    // Weather Type (ex. Cloudy)
-    // Current Temperature
-    // High Temperature
-    // Low Temperature
-    // Cloudiness
-    // Humidity
-    // Wind Speed  
 
     console.log("weatherData", weatherData);
 
     return (
-        <div>
+        <div className="body"
+        style={{
+            background: `linear-gradient(
+            rgba(${parseInt(currentTemp.slice(0, -1)) > 80 ? "255, 204, 255" : "255, 153, 153"},
+            ${parseInt(cloudiness.slice(0, -1)) / 250 + 1}), 
+            rgba(${parseInt(currentTemp.slice(0, -1)) > 80 ? "0,0,0" : "0,0,0"},
+            ${parseInt(cloudiness.slice(0, -1)) / 250 + .5}))`,
+        }}        
+        >
             <Header />
             <main className="Home">
                 <h2>Weather in <span className="Highlight">{city}</span></h2>
@@ -119,7 +119,6 @@ function Home() {
                             <p className="WeatherInfo_Temperature_Small">{windSpeed}</p>
                         </div>
                     </div>
-
                 </div>
             </main>
         </div>
