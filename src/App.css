@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap");
 
-*{
+* {
   font-family: "Commissioner", sans-serif;
 }
 
@@ -36,7 +36,7 @@
 
 /* Home Styling */
 
-.Highlight{
+.Highlight {
   background: black;
   color: white;
   display: inline-block;
@@ -69,7 +69,6 @@
   flex-basis: 30%;
   padding: 30px;
   text-align: center;
-
 }
 
 .WeatherInfo_Type {
@@ -79,8 +78,6 @@
 }
 
 .WeatherInfo_Extra {
-  /* border: 2px solid black;
-  border-left: none; */
   display: flex;
   flex-basis: 70%;
   padding: 30px;
@@ -95,7 +92,7 @@
   margin: 0;
 }
 
-.WeatherInfo_Temperature_Small{
+.WeatherInfo_Temperature_Small {
   font-size: 48px;
   margin: 0;
   margin-bottom: 30px;
@@ -108,7 +105,7 @@
   text-transform: uppercase;
 }
 
-main{
+main {
   padding-bottom: 100px;
 }
 
@@ -118,7 +115,7 @@ main{
 }
 
 @media screen and (max-width: 640px) {
-  .Header{
+  .Header {
     flex-direction: column;
   }
 
@@ -138,7 +135,7 @@ main{
     padding-bottom: 1em;
   }
 
-  .Home  h2{
+  .Home h2 {
     font-size: 36px;
     text-align: center;
   }
